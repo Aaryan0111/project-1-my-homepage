@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home Page — computer science graduate student</title>
+    <meta name="author" content="Aaryan Nilesh Kathole" />
+    <meta
+      name="description"
+      content="I am a computer science graduate student at Northeastern University who builds augmented reality and machine learning systems."
+    />
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=IBM+Plex+Sans:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="module" src="js/main.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="shell header-inner">
+        <a class="wordmark" href="index.html">Aaryan Nilesh Kathole</a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+        >
+          Menu
+        </button>
+        <nav aria-label="Main">
+          <ul class="nav-menu" id="nav-menu">
+            <li><a class="nav-current" href="index.html" aria-current="page">Home</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="more.html">More</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <div class="shell">
+        <section class="hero">
+          <div class="hero-text">
+            <p class="hero-status">Available for co-op from January 2027</p>
+            <h1 class="hero-name">Aaryan Nilesh Kathole</h1>
+            <p class="hero-line">
+              I build systems that put computer vision to work in physical spaces.
+            </p>
+            <p class="hero-body">
+              I am pursuing a master's in computer science at Northeastern University in
+              Boston. Before that I studied computer engineering in Mumbai, where I
+              wrote an augmented reality app that now holds a software copyright, and
+              a chest X-ray classifier that became a published paper.
+            </p>
+            <div class="button-row">
+              <a class="button button-primary" href="work.html">See what I have built</a>
+              <a class="button button-secondary" href="files/Aaryan-Kathole-Resume.pdf"
+                >Download resume</a
+              >
+            </div>
+          </div>
+          <img
+            class="hero-portrait"
+            src="images/aaryan-kathole.jpg"
+           alt="Aaryan Kathole, photographed outdoors by a river at sunset."
+            width="640"
+            height="640"
+          />
+        </section>
+      </div>
+
+      <div class="shell">
+        <section class="section">
+          <h2 class="section-heading">Three things worth knowing</h2>
+          <ul class="highlight-grid">
+            <li class="highlight">
+              <p class="highlight-kicker">Registered software copyright</p>
+              <h3 class="highlight-title">Decormate AR</h3>
+              <p class="highlight-note">
+                Registration SW-20059/2025, granted by the Copyright Office,
+                Government of India, in January 2025. I wrote the application; the
+                registration covers the six-person project team.
+              </p>
+            </li>
+            <li class="highlight">
+              <p class="highlight-kicker">Peer-reviewed publication</p>
+              <h3 class="highlight-title">Respiratory disease detection</h3>
+              <p class="highlight-note">
+                A ResNet-based classifier for chest X-rays, published at MULTINOVA
+                ICAIEHS-2025.
+              </p>
+            </li>
+            <li class="highlight">
+              <p class="highlight-kicker">Six months in industry</p>
+              <h3 class="highlight-title">Data analyst, Fab Tech Engineers</h3>
+              <p class="highlight-note">
+                Built cleaning and transformation pipelines across more than ten
+                thousand records, and the dashboards that made them useful.
+              </p>
+            </li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="shell">
+        <section class="section">
+          <h2 class="section-heading">About</h2>
+          <div class="about-grid">
+            <div class="prose">
+              <p>
+                Most of my work has landed in the same place: taking a model or a
+                sensor and making it behave sensibly in a room full of real objects
+                and real people. With Decormate AR that meant getting furniture to
+                stay where a user put it, on surfaces the phone had only just
+                discovered. With the chest X-ray work it meant building a pipeline
+                that did not fall apart the moment the images came from a different
+                machine.
+              </p>
+              <p>
+                I am currently pursuing a Master of Science in Computer Science at
+                Northeastern's Khoury College, where I have been taking programming
+                design paradigms, database management systems and algorithms. I am
+                looking for a co-op or internship from January 2027, ideally somewhere I
+                can keep working on systems that have to deal with the physical
+                world.
+              </p>
+              <p>
+                Away from a terminal I cook, travel whenever I can, and watch more
+                films than I probably should. There is
+                <a href="more.html">a page about that</a>.
+              </p>
+            </div>
+            <dl class="facts">
+              <dt>Location</dt>
+              <dd>Boston, Massachusetts</dd>
+              <dt>Studying</dt>
+              <dd>Pursuing an MS in Computer Science, Northeastern</dd>
+              <dt>Expected</dt>
+              <dd>May 2027</dd>
+              <dt>Available</dt>
+              <dd>January 2027, co-op or internship</dd>
+              <dt>Working in</dt>
+              <dd>Python, Java, C#, SQL</dd>
+            </dl>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-inner">
+        <div>
+          <h2 class="footer-heading">Get in touch</h2>
+          <p class="footer-note">
+            Boston, MA · <a href="mailto:kathole.a@northeastern.edu">kathole.a@northeastern.edu</a>
+          </p>
+        </div>
+        <ul class="footer-links">
+          <li>
+            <a href="https://www.linkedin.com/in/aaryan-kathole-9433a0398/" rel="noopener"
+              >LinkedIn</a
+            >
+          </li>
+          <li><a href="https://github.com/Aaryan0111" rel="noopener">GitHub</a></li>
+          <li><a href="files/Aaryan-Kathole-Resume.pdf">Resume</a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

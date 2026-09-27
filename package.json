@@ -1,0 +1,31 @@
+{
+  "name": "aaryan-kathole-homepage",
+  "version": "1.0.0",
+  "description": "Personal homepage for Aaryan Kathole. Static site built with vanilla HTML5, CSS3 and ES6 modules.",
+  "type": "module",
+  "author": "Aaryan Nilesh Kathole <kathole.a@northeastern.edu>",
+  "license": "MIT",
+  "homepage": "https://Aaryan0111.github.io/project-1-my-homepage/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Aaryan0111/project-1-my-homepage.git"
+  },
+  "keywords": [
+    "homepage",
+    "portfolio",
+    "html5",
+    "css3",
+    "es6-modules"
+  ],
+  "scripts": {
+    "start": "http-server . -p 8080 -c-1 -o",
+    "format": "prettier --write \"**/*.{html,css,js,json,md}\"",
+    "format:check": "prettier --check \"**/*.{html,css,js,json,md}\"",
+    "lint": "eslint js"
+  },
+  "devDependencies": {
+    "eslint": "^9.12.0",
+    "http-server": "^14.1.1",
+    "prettier": "^3.3.3"
+  }
+}

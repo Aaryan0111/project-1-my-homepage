@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Work — Aaryan Kathole</title>
+    <meta name="author" content="Aaryan Nilesh Kathole" />
+    <meta
+      name="description"
+      content="Projects, skills and experience: Decormate AR, a copyright-registered augmented reality app, and a published chest X-ray classifier."
+    />
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=IBM+Plex+Sans:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="module" src="js/main.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="shell header-inner">
+        <a class="wordmark" href="index.html">Aaryan Kathole</a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+        >
+          Menu
+        </button>
+        <nav aria-label="Main">
+          <ul class="nav-menu" id="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a class="nav-current" href="work.html" aria-current="page">Work</a></li>
+            <li><a href="more.html">More</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <div class="shell">
+        <section class="section-lead">
+          <h1 class="section-heading">Work</h1>
+          <div class="prose">
+            <p>
+              Two projects, written up as recipes: what went in, what I did with it,
+              and what came out. If you would rather read the dense version, switch
+              to the spec view.
+            </p>
+          </div>
+        </section>
+      </div>
+
+      <div class="shell">
+        <section class="section">
+          <div class="work-head">
+            <div>
+              <h2 class="section-heading">Projects</h2>
+            </div>
+            <div>
+              <div class="view-toggle" role="group" aria-label="Project detail view">
+                <button type="button" data-view="recipe" aria-pressed="true">Recipe</button>
+                <button type="button" data-view="spec" aria-pressed="false">Spec</button>
+              </div>
+              <p class="toggle-hint">Same projects, two levels of detail.</p>
+            </div>
+          </div>
+
+          <div class="project-list">
+            <article class="project-card" id="decormate-ar">
+              <header class="card-header">
+                <h3 class="card-title">Decormate AR</h3>
+                <p class="card-subtitle">
+                  Visualization app for multi-object interior decor
+                </p>
+                <p class="card-meta">
+                  Aug – Nov 2024 — serves shoppers placing furniture, decor and lab
+                  equipment in real rooms
+                </p>
+              </header>
+              <div class="card-body">
+                <div class="card-block">
+                  <h4 class="card-block-heading">Ingredients</h4>
+                  <ul class="card-list">
+                    <li>C#</li>
+                    <li>Unity 2022.3</li>
+                    <li>AR Foundation</li>
+                    <li>Unity Addressables</li>
+                    <li>ARBaseGestureInteractable</li>
+                    <li>DOTween</li>
+                  </ul>
+                </div>
+                <div class="card-block">
+                  <h4 class="card-block-heading">Method</h4>
+                  <ol class="card-list">
+                    <li>
+                      Raycast from the centre of the screen against detected planes,
+                      and drive a crosshair to the hit pose so the user always sees
+                      where an object will land.
+                    </li>
+                    <li>
+                      Load the furniture catalogue asynchronously through
+                      Addressables, so the app does not carry every 3D model in its
+                      initial build.
+                    </li>
+                    <li>
+                      Parent each placed object to its own anchor rather than a
+                      shared root, which is what allows several objects to persist
+                      independently in one scene.
+                    </li>
+                    <li>
+                      Reject placements whose surface normal faces away from the
+                      camera, using a dot product against the hit pose, to stop
+                      objects appearing behind walls.
+                    </li>
+                    <li>
+                      Guard every placement tap with a UI raycast test, so tapping
+                      the catalogue never drops furniture into the room by accident.
+                    </li>
+                  </ol>
+                </div>
+                <div class="card-block">
+                  <h4 class="card-block-heading">Yield</h4>
+                  <ul class="yield-list">
+                    <li class="yield-item">
+                      <span class="yield-label">Copyright SW-20059/2025</span>
+                      <span class="yield-detail"
+                        >Registered with the Government of India, 8 Jan 2025</span
+                      >
+                    </li>
+                    <li class="yield-item">
+                      <span class="yield-label">60+ fps on device</span>
+                      <span class="yield-detail"
+                        >Sustained with multiple models placed</span
+                      >
+                    </li>
+                    <li class="yield-item">
+                      <span class="yield-label">Multi-object placement</span>
+                      <span class="yield-detail">Independent anchors per object</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <figure class="card-figure">
+                <img
+                  src="images/decormate-unity-editor.jpg"
+                  alt="The Decormate AR project open in the Unity editor, showing the AR scene hierarchy on the left and a 3D chair model positioned above a placement marker in the game view."
+                  loading="lazy"
+                />
+                <figcaption class="card-caption">
+                  Development view: the placement marker snapping to a detected plane.
+                </figcaption>
+              </figure>
+            </article>
+
+            <article class="project-card" id="respiratory-cnn">
+              <header class="card-header">
+                <h3 class="card-title">Respiratory disease detection</h3>
+                <p class="card-subtitle">
+                  Chest X-ray classification with a ResNet-based CNN
+                </p>
+                <p class="card-meta">
+                  Feb – Apr 2025 — serves clinicians triaging chest X-rays where a
+                  radiologist is not on hand
+                </p>
+              </header>
+              <div class="card-body">
+                <div class="card-block">
+                  <h4 class="card-block-heading">Ingredients</h4>
+                  <ul class="card-list">
+                    <li>Python</li>
+                    <li>ResNet</li>
+                    <li>Deep learning</li>
+                    <li>Medical imaging datasets</li>
+                  </ul>
+                </div>
+                <div class="card-block">
+                  <h4 class="card-block-heading">Method</h4>
+                  <ol class="card-list">
+                    <li>
+                      Assemble and clean chest X-ray datasets covering pneumonia,
+                      tuberculosis and COVID-19.
+                    </li>
+                    <li>
+                      Build a preprocessing and augmentation pipeline so the model
+                      generalises across images from different machines and
+                      hospitals.
+                    </li>
+                    <li>
+                      Train a ResNet-based classifier and validate it against
+                      held-out data.
+                    </li>
+                    <li>
+                      Evaluate on accuracy, precision, recall and F1 rather than
+                      accuracy alone, because class imbalance makes accuracy
+                      misleading here.
+                    </li>
+                  </ol>
+                </div>
+                <div class="card-block">
+                  <h4 class="card-block-heading">Yield</h4>
+                  <ul class="yield-list">
+                    <li class="yield-item">
+                      <span class="yield-label">Published, ICAIEHS-2025</span>
+                      <span class="yield-detail">DOI 10.2991/978-94-6463-852-3_19</span>
+                    </li>
+                    <li class="yield-item">
+                      <span class="yield-label">Three-class classifier</span>
+                      <span class="yield-detail"
+                        >Pneumonia, tuberculosis, COVID-19</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <footer class="card-footer">
+                <a
+                  class="card-link"
+                  href="https://doi.org/10.2991/978-94-6463-852-3_19"
+                  rel="noopener"
+                  >Read the paper</a
+                >
+              </footer>
+            </article>
+          </div>
+        </section>
+      </div>
+
+      <div class="shell">
+        <section class="section">
+          <h2 class="section-heading">Skills</h2>
+          <ul class="skills-grid">
+            <li class="skill-group">
+              <h3 class="skill-name">Languages</h3>
+              <p class="skill-items">Python, Java, C#, SQL</p>
+            </li>
+            <li class="skill-group">
+              <h3 class="skill-name">Databases</h3>
+              <p class="skill-items">MySQL, MongoDB</p>
+            </li>
+            <li class="skill-group">
+              <h3 class="skill-name">Web</h3>
+              <p class="skill-items">HTML, CSS, JavaScript, Flask, Node.js, Streamlit</p>
+            </li>
+            <li class="skill-group">
+              <h3 class="skill-name">Tools</h3>
+              <p class="skill-items">Unity, AR Foundation, Git, AWS, Power BI</p>
+            </li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="shell">
+        <section class="section">
+          <h2 class="section-heading">Education and experience</h2>
+          <ul class="timeline">
+            <li>
+              <p class="timeline-when">Sept 2025 – May 2027 (expected)</p>
+              <h3 class="timeline-what">MS Computer Science</h3>
+              <p class="timeline-where">
+                Khoury College of Computer Sciences, Northeastern University, Boston.
+                Programming design paradigms, database management systems,
+                algorithms.
+              </p>
+            </li>
+            <li>
+              <p class="timeline-when">June 2025</p>
+              <h3 class="timeline-what">BTech Computer Engineering</h3>
+              <p class="timeline-where">
+                Ramrao Adik Institute of Technology, D Y Patil University, Mumbai.
+                GPA 8.79 out of 10.
+              </p>
+            </li>
+            <li>
+              <p class="timeline-when">Feb – Aug 2024</p>
+              <h3 class="timeline-what">Data analyst intern</h3>
+              <p class="timeline-where">
+                Fab Tech Engineers, Maharashtra. Cleaning and transformation
+                pipelines across more than ten thousand records; dashboards in Power
+                BI and Excel.
+              </p>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-inner">
+        <div>
+          <h2 class="footer-heading">Get in touch</h2>
+          <p class="footer-note">
+            Boston, MA · <a href="mailto:kathole.a@northeastern.edu">kathole.a@northeastern.edu</a>
+          </p>
+        </div>
+        <ul class="footer-links">
+          <li>
+            <a href="https://www.linkedin.com/in/aaryan-kathole-9433a0398/" rel="noopener"
+              >LinkedIn</a
+            >
+          </li>
+          <li><a href="https://github.com/Aaryan0111" rel="noopener">GitHub</a></li>
+          <li><a href="files/Aaryan-Kathole-Resume.pdf">Resume</a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
