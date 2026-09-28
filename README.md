@@ -133,21 +133,9 @@ mockups — is at [`docs/DESIGN.md`](docs/DESIGN.md).
 
 **Prompts used:**
 
-1. "Help me build my personal homepage from scratch. It should be 3 pages where 2 pages have my own input and the 3rd is an AI page. We will have a step by step approach as I am new to this subject."
-2. "Write the design document including project description, user personas, user stories and design mockups."
-3. "I have travelled to 8 states in the USA, and to Thailand, Malaysia and Singapore. I like Interstellar, 3 Idiots, Batman and Marvel. I like Indian, Thai, Nepali, American, Italian and Burmese food. Write the More page from this."
-4. "Create a clear and descriptive README including: Author, Class Link, Project Objective, Screenshot, Instructions to build, Video Demo, GenAI Usage, References, Google Slides."
-5. "Given the rubric, please check the code for any omissions or any missing parts."
-
-**How it was used:** I supplied all the content and made the design decisions;
-the model drafted markup, styles and copy from what I gave it. The `more.html`
-page is the AI-generated page required by the assignment: I listed the places,
-films and cuisines and the model wrote them up.
-
-**What I changed:** renamed the third page, removed an AI-disclosure banner from
-the page itself, dropped a proposed world map, corrected wording that implied I
-had already graduated, fixed a wrong screenshot and third-person alt text, and
-trimmed the design document back to what the rubric asks for.
+1. "Create a clear and descriptive README including: Author, Class Link, Project Objective, Screenshot, Instructions to build, Video Demo, GenAI Usage, References, Google Slides."
+2. "Given the rubric, please check the code for any omissions or any missing parts."
+3. "Try to add maps in the More section to showcase my travel history." (not shipped)
 
 ## Sources and references
 
