@@ -177,7 +177,7 @@ a:hover {
   color: var(--ink);
 }
 
-.nav-current {
+.nav-menu a.nav-current {
   color: var(--ink);
   border-bottom-color: var(--accent);
 }
