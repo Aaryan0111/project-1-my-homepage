@@ -102,7 +102,7 @@ CSS Grid and Flexbox rather than Bootstrap.
 .
 ├── index.html            Home
 ├── work.html             Work
-├── more.html           More (AI-generated)
+├── more.html             More 
 ├── css/
 │   └── style.css         Single stylesheet, organised by section
 ├── js/
@@ -134,7 +134,7 @@ mockups — is at [`docs/DESIGN.md`](docs/DESIGN.md).
 **Prompts used:**
 
 1. "Create a clear and descriptive README including: Author, Class Link, Project Objective, Screenshot, Instructions to build, Video Demo, GenAI Usage, References."
-2. "Given the rubric, please check if the code needs any omissions or has any missing parts."
+2. "Given the rubric, please check if the code has any omissions or has any missing parts."
 3. "Try to add maps in the More section to showcase my travel history." (not shipped)
 
 ## Sources and references
