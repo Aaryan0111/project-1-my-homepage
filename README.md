@@ -22,8 +22,6 @@ Course page: <https://johnguerra.co/classes/webDevelopment_online_fall_2026/>
 
 ![A project shown as a recipe card, with ingredients, method and yield columns](docs/screenshots/recipe-card.png)
 
-<!-- TODO: retake both screenshots in your own browser after deploying, so the web fonts render. -->
-
 ## Video demo
 
 A short narrated walkthrough: <!-- TODO: paste your YouTube link here -->
