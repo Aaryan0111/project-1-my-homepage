@@ -3,17 +3,34 @@
 A three-page static homepage built with vanilla HTML5, CSS3 and ES6 modules. No
 frameworks, no component libraries, no build step.
 
-**Author:** Aaryan Nilesh Kathole
-**Live site:** https://Aaryan0111.github.io/project-1-my-homepage/
-**Class:** CS 5610 Web Development, Northeastern University
+## Author
 
-<!-- TODO: replace the class line above with your course number and the Canvas link. -->
+**Aaryan Nilesh Kathole**
+<kathole.a@northeastern.edu> | [LinkedIn](https://www.linkedin.com/in/aaryan-kathole-9433a0398/) | [GitHub](https://github.com/Aaryan0111)
+
+## Class
+
+CS 5610 Web Development, Northeastern University.
+Instructor: John Alexis Guerra Gomez.
+Course page: <https://johnguerra.co/classes/webDevelopment_online_fall_2026/>
+
+**Live site:** <https://aaryan0111.github.io/project-1-my-homepage/>
+
+## Screenshot
 
 ![The home page, showing the hero with an availability note and three highlight cards](docs/screenshots/home.png)
 
 ![A project shown as a recipe card, with ingredients, method and yield columns](docs/screenshots/recipe-card.png)
 
 <!-- TODO: retake both screenshots in your own browser after deploying, so the web fonts render. -->
+
+## Video demo
+
+A short narrated walkthrough: <!-- TODO: paste your YouTube link here -->
+
+## Presentation slides
+
+Project 1 presentation: <!-- TODO: paste your Google Slides link here -->
 
 ## Project objective
 
@@ -68,6 +85,19 @@ npm run format        # Prettier, rewrites files in place
 
 HTML is validated at https://validator.w3.org.
 
+## Tech stack
+
+| Layer | Technologies |
+| --- | --- |
+| Markup | HTML5 |
+| Styling | CSS3 (Grid and Flexbox, hand-written), Google Fonts |
+| Scripting | Vanilla JavaScript, ES6 modules |
+| Tooling | ESLint, Prettier, http-server, Node.js (dev only) |
+| Deployment | GitHub Pages (static hosting) |
+
+No frameworks and no component libraries are used. The layout is hand-written
+CSS Grid and Flexbox rather than Bootstrap.
+
 ## Project structure
 
 ```
@@ -101,42 +131,34 @@ mockups — is at [`docs/DESIGN.md`](docs/DESIGN.md).
 
 ## Use of generative AI
 
-This section covers **`more.html` only**. The home and work pages are written
-by hand.
+**Tool:** Claude by Anthropic (claude.ai), model Claude Opus 5
 
-| | |
-| --- | --- |
-| **Model** | Claude Sonnet 4.5 (`claude-sonnet-4-5`), via claude.ai |
-| **Date used** | September 2026 |
-| **Scope** | Draft body copy for `more.html` |
+**Prompts used:**
 
-### How it was used
+1. "Help me build my personal homepage from scratch. It should be 3 pages where 2 pages have my own input and the 3rd is an AI page. We will have a step by step approach as I am new to this subject."
+2. "Write the design document including project description, user personas, user stories and design mockups."
+3. "I have travelled to 8 states in the USA, and to Thailand, Malaysia and Singapore. I like Interstellar, 3 Idiots, Batman and Marvel. I like Indian, Thai, Nepali, American, Italian and Burmese food. Write the More page from this."
+4. "Create a clear and descriptive README including: Author, Class Link, Project Objective, Screenshot, Instructions to build, Video Demo, GenAI Usage, References, Google Slides."
+5. "Given the rubric, please check the code for any omissions or any missing parts."
 
-I asked the model to draft the reading, watching, and cooking and travel sections
-of the More page, given the places I have travelled, the films I watch and the food I eat. I
-then reviewed every entry, removed the ones that did not reflect things I have
-actually read, watched or cooked, and rewrote the notes in my own words where the
-draft was generic.
+**How it was used:** I supplied all the content and made the design decisions;
+the model drafted markup, styles and copy from what I gave it. The `more.html`
+page is the AI-generated page required by the assignment: I listed the places,
+films and cuisines and the model wrote them up.
 
-The model did not write the HTML structure, the CSS or any JavaScript on this
-page — those are hand-written and shared with the other two pages.
+**What I changed:** renamed the third page, removed an AI-disclosure banner from
+the page itself, dropped a proposed world map, corrected wording that implied I
+had already graduated, fixed a wrong screenshot and third-person alt text, and
+trimmed the design document back to what the rubric asks for.
 
-### Prompts used
+## Sources and references
 
-1. *"Draft copy for a personal homepage page called More, with three sections:
-   travel, watching, and food. Each card needs a title, a byline, and a short
-   personal note. Clean, plain, no marketing voice."*
-2. *"The notes read like blurbs. Rewrite them so each one says something specific
-   that only someone who had actually read or watched it would say."*
-
-### What I changed afterwards
-
-<!-- TODO: fill this in honestly after you edit the page. Example entries: -->
-
-- Supplied the actual content: the eight US states, the countries I have
-  visited, the films I watch and the cuisines I eat. The model wrote it up.
-- Cut the reading section entirely, since I do not read much.
-- Reviewed every note and removed anything that did not reflect me.
+- MDN Web Docs: <https://developer.mozilla.org>
+- MDN, Your first website: <https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Your_first_website>
+- MDN, CSS styling basics: <https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics>
+- Fraunces on Google Fonts: <https://fonts.google.com/specimen/Fraunces>
+- IBM Plex Sans on Google Fonts: <https://fonts.google.com/specimen/IBM+Plex+Sans>
+- W3C Markup Validation Service: <https://validator.w3.org>
 
 ## License
 

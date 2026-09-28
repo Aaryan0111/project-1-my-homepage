@@ -23,17 +23,7 @@ The evidence I have to work with is unusually concrete for a student, and the de
 - A peer-reviewed publication at MULTINOVA ICAIEHS-2025 (DOI: 10.2991/978-94-6463-852-3_19)
 - A six-month data analyst internship with measurable scope (10,000+ records)
 
-### 1.3 Scope
-
-| In scope | Out of scope |
-| --- | --- |
-| Three pages, static, client-side only | Any server, database or API |
-| Hand-written CSS Grid and Flexbox layout | Bootstrap or any CSS framework |
-| ES6 modules, no bundler | React, Vue, jQuery |
-| Responsive down to 360px | Native mobile apps |
-| WCAG-minded semantics and alt text | Full WCAG 2.1 AA audit |
-
-### 1.4 Technical constraints
+### 1.3 Technical constraints
 
 These come from the assignment and act as hard design constraints:
 
@@ -47,18 +37,6 @@ These come from the assignment and act as hard design constraints:
 8. Standard elements for standard jobs â€” a button is a `<button>`, never a styled `<div>` or `<span>`.
 9. Every image carries a meaningful `alt` value.
 10. MIT licensed.
-
-### 1.5 Information architecture
-
-```
-/                 index.html    Home      Who I am, availability, headline achievements
-/work.html        work.html     Work      Projects, skills, education, experience
-/more.html      more.html   More      Travel, films and food (AI-generated)
-```
-
-Three pages, three distinct URLs, one shared header and footer. `more.html` is the AI-generated page required by the rubric; the GenAI documentation section in the README covers this page only.
-
----
 
 ## 2. User personas
 
@@ -284,38 +262,3 @@ A single deep green accent against cool near-neutrals. One accent colour only â€
 | < 720px | Everything single column; nav collapses |
 
 ---
-
-## 5. Component inventory
-
-| Component | Used on | Notes |
-| --- | --- | --- |
-| Site header / nav | all | Shared markup; active state set per page by class |
-| Hero | home | Two columns with a circular portrait; stacks on mobile |
-| Highlight card | home | |
-| Quick-facts list | home | Semantic `<dl>` |
-| View toggle | work | `<button>` with `aria-pressed`; drives the render module |
-| Project card | work | Rendered from data; two presentations |
-| Skills grid | work | |
-| Timeline | work | |
-| Media card grid | more | One component, three sections: travel, watching, food |
-| Site footer | all | |
-
-## 6. JavaScript modules
-
-| Module | Responsibility |
-| --- | --- |
-| `js/main.js` | Entry point; imports and initialises the rest |
-| `js/data/projects.js` | Exports the project data array |
-| `js/projects-view.js` | Renders project cards; implements the Recipe/Spec toggle |
-| `js/nav.js` | Marks the active nav item; handles the mobile nav |
-
-The toggle in `projects-view.js` is the original JavaScript functionality required by the rubric. It is well over five lines and implements real behaviour: it maps over the project data, selects a field projection based on current mode, rebuilds each card's inner DOM, and updates `aria-pressed` on both toggle buttons.
-
-## 7. Out of scope for v1
-
-Deliberately deferred so v1 ships clean:
-
-- Dark mode
-- A contact form (would need a backend)
-- Filtering or search on the work page
-- Animation beyond CSS transitions on hover and focus
