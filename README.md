@@ -38,11 +38,11 @@ minute what I do, what I have shipped, and how to reach me.
 
 The site has three pages:
 
-| Page | File | What it is |
-| --- | --- | --- |
+| Page | File         | What it is                                          |
+| ---- | ------------ | --------------------------------------------------- |
 | Home | `index.html` | Who I am, availability, three headline achievements |
-| Work | `work.html` | Projects, skills, education and experience |
-| More | `more.html` | Travel, films and food — **AI-generated** |
+| Work | `work.html`  | Projects, skills, education and experience          |
+| More | `more.html`  | Travel, films and food — **AI-generated**           |
 
 ## Original component
 
@@ -85,13 +85,13 @@ HTML is validated at https://validator.w3.org.
 
 ## Tech stack
 
-| Layer | Technologies |
-| --- | --- |
-| Markup | HTML5 |
-| Styling | CSS3 (Grid and Flexbox, hand-written), Google Fonts |
-| Scripting | Vanilla JavaScript, ES6 modules |
-| Tooling | ESLint, Prettier, http-server, Node.js (dev only) |
-| Deployment | GitHub Pages (static hosting) |
+| Layer      | Technologies                                        |
+| ---------- | --------------------------------------------------- |
+| Markup     | HTML5                                               |
+| Styling    | CSS3 (Grid and Flexbox, hand-written), Google Fonts |
+| Scripting  | Vanilla JavaScript, ES6 modules                     |
+| Tooling    | ESLint, Prettier, http-server, Node.js (dev only)   |
+| Deployment | GitHub Pages (static hosting)                       |
 
 No frameworks and no component libraries are used. The layout is hand-written
 CSS Grid and Flexbox rather than Bootstrap.

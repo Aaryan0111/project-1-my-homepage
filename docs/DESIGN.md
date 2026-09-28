@@ -44,10 +44,10 @@ Three personas, drawn from who actually reaches a student homepage. Each one cha
 
 ### Persona 1 — Priya Raghavan, technical recruiter
 
-| | |
-| --- | --- |
-| **Age** | 34 |
-| **Role** | Technical recruiter, co-op program at a 400-person software company in Boston |
+|             |                                                                                                             |
+| ----------- | ----------------------------------------------------------------------------------------------------------- |
+| **Age**     | 34                                                                                                          |
+| **Role**    | Technical recruiter, co-op program at a 400-person software company in Boston                               |
 | **Context** | Screening ~60 candidates for a summer cohort. Usually on a laptop, sometimes on her phone between meetings. |
 
 **Goals**
@@ -71,10 +71,10 @@ Three personas, drawn from who actually reaches a student homepage. Each one cha
 
 ### Persona 2 — Daniel Okoro, engineering hiring manager
 
-| | |
-| --- | --- |
-| **Age** | 41 |
-| **Role** | Senior ML engineer; interviews and makes the final call on interns |
+|             |                                                                                                                            |
+| ----------- | -------------------------------------------------------------------------------------------------------------------------- |
+| **Age**     | 41                                                                                                                         |
+| **Role**    | Senior ML engineer; interviews and makes the final call on interns                                                         |
 | **Context** | Priya forwards him five shortlisted profiles. He opens each one for maybe three minutes before deciding who gets a screen. |
 
 **Goals**
@@ -98,10 +98,10 @@ Three personas, drawn from who actually reaches a student homepage. Each one cha
 
 ### Persona 3 — Sofia Almeida, peer reviewer
 
-| | |
-| --- | --- |
-| **Age** | 24 |
-| **Role** | Fellow MSCS student, assigned to code-review this project |
+|             |                                                                                             |
+| ----------- | ------------------------------------------------------------------------------------------- |
+| **Age**     | 24                                                                                          |
+| **Role**    | Fellow MSCS student, assigned to code-review this project                                   |
 | **Context** | Reviewing on a laptop with DevTools open. Will read the source, not just the rendered page. |
 
 **Goals**
@@ -123,24 +123,28 @@ Three personas, drawn from who actually reaches a student homepage. Each one cha
 
 ## 3. User stories
 
-Written as: *As a [persona], I want [capability], so that [benefit].* Acceptance criteria state the condition under which the story is complete.
+Written as: _As a [persona], I want [capability], so that [benefit]._ Acceptance criteria state the condition under which the story is complete.
 
 ### Epic A — Orient quickly (home page)
 
 **A1.** As Priya, I want to see the candidate's name, degree programme and availability date without scrolling, so that I can decide in seconds whether to keep reading.
+
 - The `<h1>` names me and my programme.
 - An availability indicator reading "Available May 2026" renders above the fold at 1280×720 and at 375×667.
 - The tagline is one sentence and states what I build.
 
 **A2.** As Priya, I want a clearly labelled resume download in the first screenful, so that I can attach it to an internal submission without hunting.
+
 - A "Download resume" control sits in the hero alongside the primary call to action.
 - It links to a PDF committed to the repository, so it cannot 404.
 
 **A3.** As Daniel, I want three headline achievements summarised on the landing page, so that I can tell within one screen whether this candidate is worth three minutes.
+
 - A highlights grid shows exactly three items: the copyright registration, the publication, and the internship.
 - Each is a link through to fuller detail on the work page or to an external source.
 
 **A4.** As any visitor, I want the site to be readable on my phone, so that I can look at it away from my desk.
+
 - The layout reflows to a single column below 720px.
 - No horizontal scrolling at 360px width.
 - Tap targets are at least 44×44px.
@@ -148,43 +152,52 @@ Written as: *As a [persona], I want [capability], so that [benefit].* Acceptance
 ### Epic B — Evaluate the work (work page)
 
 **B1.** As Daniel, I want each project to state its outcome explicitly, so that I can distinguish shipped work from coursework.
+
 - Every project card renders a Yield section.
 - Each Yield contains at least one verifiable item: a metric, a registration number, or a DOI.
 
 **B2.** As Daniel, I want to see what technologies each project used and what I personally did, separated from each other, so that I can assess depth rather than read a blended paragraph.
+
 - Ingredients lists the stack as discrete items.
 - Method lists implementation steps in order, as an ordered list.
 
 **B3.** As Daniel, I want to switch from the narrative view to a dense technical view, so that I can compare projects quickly once I have the gist.
+
 - A visible toggle switches all cards between Recipe and Spec presentation.
 - The toggle operates without a page reload.
 - State is applied to every card simultaneously, not per-card.
 - The page remains usable with JavaScript disabled: Recipe view is the server-rendered default in the HTML.
 
 **B4.** As Sofia, I want the project content to come from a data structure rather than being hard-coded in markup, so that I can see a clean separation of data and presentation.
+
 - Project content lives in an exported array in `js/data/projects.js`.
 - The render module imports it and builds the DOM.
 
 **B5.** As Priya, I want skills grouped by category, so that I can keyword-match against a requisition quickly.
+
 - Skills are grouped as Languages, Databases, Web, Tools.
 - No numeric proficiency ratings are shown.
 
 ### Epic C — Read the person (more page)
 
 **C1.** As Daniel, I want some sense of who this person is outside their transcript, so that I can judge culture fit before spending a screening slot.
+
 - The page covers travel, films and food.
 - Each entry carries a short personal note, not just a title.
 
 **C2.** As Sofia, I want AI-generated content clearly marked as such, so that I can tell authored content from generated content.
+
 - The README names the model, the version, the prompts used, and what I edited afterwards.
 - The disclosure lives in the README rather than on the page itself, so the page reads as a personal page rather than a disclaimer.
 
 ### Epic D — Review and reuse (cross-cutting)
 
 **D1.** As Sofia, I want to clone the repository and run it locally in under two minutes, so that I can review it properly.
+
 - The README lists prerequisites, install steps, and a single command to serve the site.
 
 **D2.** As any visitor using a screen reader, I want images and controls to be announced meaningfully, so that I can use the site.
+
 - Every `<img>` has a descriptive `alt`; purely decorative images use `alt=""`.
 - The toggle is a real `<button>` with `aria-pressed` reflecting its state.
 - Landmarks are used: `<header>`, `<nav>`, `<main>`, `<footer>`.
@@ -228,16 +241,16 @@ The recipe-card view is the creative component.
 
 **Colour**
 
-| Token | Value | Use |
-| --- | --- | --- |
-| `--paper` | `#FBFBF9` | Page background |
-| `--surface` | `#FFFFFF` | Cards |
-| `--panel` | `#EFF0EA` | Quiet panels, footer, skill groups |
-| `--ink` | `#1B1D1A` | Body text |
-| `--ink-soft` | `#55574F` | Secondary text |
-| `--accent` | `#3E5C3A` | Links, active nav, primary button, column headings |
-| `--accent-soft` | `#E9EFE6` | Availability pill |
-| `--rule` | `#DFE0D8` | Hairlines |
+| Token           | Value     | Use                                                |
+| --------------- | --------- | -------------------------------------------------- |
+| `--paper`       | `#FBFBF9` | Page background                                    |
+| `--surface`     | `#FFFFFF` | Cards                                              |
+| `--panel`       | `#EFF0EA` | Quiet panels, footer, skill groups                 |
+| `--ink`         | `#1B1D1A` | Body text                                          |
+| `--ink-soft`    | `#55574F` | Secondary text                                     |
+| `--accent`      | `#3E5C3A` | Links, active nav, primary button, column headings |
+| `--accent-soft` | `#E9EFE6` | Availability pill                                  |
+| `--rule`        | `#DFE0D8` | Hairlines                                          |
 
 A single deep green accent against cool near-neutrals. One accent colour only — restraint reads as deliberate, and it keeps the stylesheet small enough to stay organised. The greens carry a faint warmth so the page does not read as clinical, but the background is deliberately not cream: warm cream with a terracotta accent has become the default palette of generated pages, and this site should not look like one.
 
@@ -255,10 +268,10 @@ A single deep green accent against cool near-neutrals. One accent colour only �
 
 **Breakpoints**
 
-| Width | Behaviour |
-| --- | --- |
-| ≥ 1024px | Full multi-column layout |
+| Width      | Behaviour                                 |
+| ---------- | ----------------------------------------- |
+| ≥ 1024px   | Full multi-column layout                  |
 | 720–1023px | Highlights and skills drop to two columns |
-| < 720px | Everything single column; nav collapses |
+| < 720px    | Everything single column; nav collapses   |
 
 ---
