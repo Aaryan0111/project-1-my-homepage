@@ -1,13 +1,5 @@
-/**
- * Handles the small-screen navigation menu.
- *
- * The nav is a plain list that is always visible above 720px. Below that it
- * collapses behind a button, which this module opens and closes.
- */
+// Opens and closes the collapsed navigation menu below 720px.
 
-/**
- * Wires up the menu button, if this page has one.
- */
 export function initNav() {
   const button = document.querySelector('.nav-toggle');
   const menu = document.querySelector('.nav-menu');

@@ -1,10 +1,6 @@
-/* =========================================================================
-   Aaryan Kathole — personal homepage
-   Organised as: tokens, reset, layout, header, hero, components, footer,
-   responsive. No !important anywhere; specificity stays at one class deep.
-   ========================================================================= */
+/* Aaryan Kathole — personal homepage. Single stylesheet, grouped by section. */
 
-/* --- Tokens -------------------------------------------------------------- */
+/* --- Tokens ------ */
 
 :root {
   --paper: #fbfbf9;
@@ -16,8 +12,8 @@
   --accent: #3e5c3a;
   --accent-soft: #e9efe6;
 
-  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
-  --font-body: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
 
   --step-0: 1rem;
   --step-1: 1.25rem;
@@ -38,7 +34,7 @@
   --radius: 6px;
 }
 
-/* --- Reset --------------------------------------------------------------- */
+/* --- Reset --- */
 
 *,
 *::before,
@@ -96,7 +92,7 @@ a:hover {
   outline-offset: 3px;
 }
 
-/* --- Layout -------------------------------------------------------------- */
+/* --- Layout ---------- */
 
 .shell {
   width: 100%;
@@ -140,7 +136,7 @@ a:hover {
   border-radius: var(--radius);
 }
 
-/* --- Header -------------------------------------------------------------- */
+/* --- Header ----- */
 
 .site-header {
   border-bottom: 1px solid var(--rule);
@@ -198,7 +194,7 @@ a:hover {
   min-height: 44px;
 }
 
-/* --- Hero ---------------------------------------------------------------- */
+/* --- Hero ------------ */
 
 .hero {
   padding-block: var(--space-6);
@@ -290,7 +286,7 @@ a:hover {
   background: var(--accent-soft);
 }
 
-/* --- Highlights ---------------------------------------------------------- */
+/* --- Highlights ---- */
 
 .highlight-grid {
   display: grid;
@@ -324,7 +320,7 @@ a:hover {
   font-size: 0.9375rem;
 }
 
-/* --- About --------------------------------------------------------------- */
+/* --- About -------- */
 
 .about-grid {
   display: grid;
@@ -352,7 +348,7 @@ a:hover {
   margin: 0;
 }
 
-/* --- View toggle --------------------------------------------------------- */
+/* --- View toggle ------- */
 
 .work-head {
   display: flex;
@@ -383,7 +379,7 @@ a:hover {
   cursor: pointer;
 }
 
-.view-toggle button[aria-pressed='true'] {
+.view-toggle button[aria-pressed="true"] {
   background: var(--surface);
   color: var(--ink);
   box-shadow: 0 1px 2px rgba(27, 29, 26, 0.12);
@@ -395,7 +391,7 @@ a:hover {
   margin-top: var(--space-1);
 }
 
-/* --- Project cards ------------------------------------------------------- */
+/* --- Project cards --- */
 
 .project-list {
   display: grid;
@@ -518,7 +514,7 @@ a:hover {
   font-size: 0.9375rem;
 }
 
-/* --- Skills and timeline ------------------------------------------------- */
+/* --- Skills and timeline ------ */
 
 .skills-grid {
   display: grid;
@@ -573,7 +569,7 @@ a:hover {
   font-size: 0.9375rem;
 }
 
-/* --- Media cards --------------------------------------------------------- */
+/* --- Media cards --------- */
 
 .media-grid {
   display: grid;
@@ -608,7 +604,7 @@ a:hover {
   margin-top: var(--space-1);
 }
 
-/* --- Footer -------------------------------------------------------------- */
+/* --- Footer ----------- */
 
 .site-footer {
   border-top: 1px solid var(--rule);
@@ -644,7 +640,7 @@ a:hover {
   font-size: 0.9375rem;
 }
 
-/* --- Responsive ---------------------------------------------------------- */
+/* --- Responsive ---- */
 
 @media (max-width: 60rem) {
   .hero {

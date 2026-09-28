@@ -1,12 +1,8 @@
-/**
- * Renders the project cards on the work page and switches them between two
- * presentations of the same data: "recipe" and "spec".
- *
- * This is the original interactive component of the site. The markup in
- * work.html contains a plain-HTML recipe view so the page is readable with
- * JavaScript disabled; on load this module replaces it with the rendered
- * version and enables the toggle.
- */
+// Renders the project cards on the work page and switches them between the
+// recipe view and the spec view.
+//
+// work.html already contains the recipe view as plain HTML so the page still
+// reads with JavaScript off. This replaces it on load and turns on the toggle.
 
 import { projects } from './data/projects.js';
 
@@ -14,14 +10,7 @@ const VIEWS = ['recipe', 'spec'];
 
 let currentView = 'recipe';
 
-/**
- * Builds an element, optionally with a class and text content.
- *
- * @param {string} tag Tag name.
- * @param {string} [className] Class attribute value.
- * @param {string} [text] Text content.
- * @returns {HTMLElement} The new element.
- */
+// Shorthand for the create/set-class/set-text pattern, used all over this file.
 function el(tag, className, text) {
   const node = document.createElement(tag);
   if (className) {
@@ -33,14 +22,6 @@ function el(tag, className, text) {
   return node;
 }
 
-/**
- * Builds a labelled list block, e.g. the Ingredients column.
- *
- * @param {string} heading Column heading.
- * @param {string[]} items List items.
- * @param {boolean} ordered Whether the list is a sequence.
- * @returns {HTMLElement} The column element.
- */
 function buildListBlock(heading, items, ordered) {
   const block = el('div', 'card-block');
   block.append(el('h4', 'card-block-heading', heading));
@@ -54,12 +35,6 @@ function buildListBlock(heading, items, ordered) {
   return block;
 }
 
-/**
- * Builds the outcome block, where each entry carries a short supporting detail.
- *
- * @param {{label: string, detail: string}[]} entries Outcomes.
- * @returns {HTMLElement} The column element.
- */
 function buildYieldBlock(entries) {
   const block = el('div', 'card-block');
   block.append(el('h4', 'card-block-heading', 'Yield'));
@@ -76,12 +51,7 @@ function buildYieldBlock(entries) {
   return block;
 }
 
-/**
- * Builds the dense technical view as a definition list.
- *
- * @param {string[][]} rows Term and description pairs.
- * @returns {HTMLElement} The definition list.
- */
+// The spec view is the same data as a definition list instead of three columns.
 function buildSpecBlock(rows) {
   const list = el('dl', 'spec-list');
   rows.forEach(([term, description]) => {
@@ -91,12 +61,6 @@ function buildSpecBlock(rows) {
   return list;
 }
 
-/**
- * Builds the figure for a project that has an image.
- *
- * @param {{src: string, alt: string, caption: string}} image Image data.
- * @returns {HTMLElement} The figure element.
- */
 function buildFigure(image) {
   const figure = el('figure', 'card-figure');
   const img = el('img');
@@ -108,12 +72,6 @@ function buildFigure(image) {
   return figure;
 }
 
-/**
- * Builds one project card in the current view.
- *
- * @param {object} project A project from the data module.
- * @returns {HTMLElement} The article element for this project.
- */
 function buildCard(project) {
   const card = el('article', 'project-card');
   card.id = project.id;
@@ -157,18 +115,10 @@ function buildCard(project) {
   return card;
 }
 
-/**
- * Clears the container and renders every project in the current view.
- *
- * @param {HTMLElement} container The element that holds the cards.
- */
 function render(container) {
   container.replaceChildren(...projects.map(buildCard));
 }
 
-/**
- * Wires up the toggle buttons and renders the initial view.
- */
 export function initProjects() {
   const container = document.querySelector('.project-list');
   const buttons = document.querySelectorAll('.view-toggle button');
@@ -190,6 +140,7 @@ export function initProjects() {
       currentView = requested;
       render(container);
 
+      // aria-pressed tells a screen reader which view is active.
       buttons.forEach((other) => {
         other.setAttribute('aria-pressed', String(other.dataset.view === currentView));
       });

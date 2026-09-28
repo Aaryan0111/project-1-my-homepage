@@ -1,11 +1,5 @@
-/**
- * Project data for the work page.
- *
- * Each project is rendered twice from this one object: once as a "recipe"
- * (ingredients / method / yield) and once as a "spec" (a dense definition
- * list). Keeping the data here rather than in the markup means the two
- * presentations can never drift apart.
- */
+// All project content lives here so the recipe view and the spec view render
+// from one source and cannot fall out of step.
 
 export const projects = [
   {
@@ -39,30 +33,18 @@ export const projects = [
       'Guard every placement tap with a UI raycast test, so tapping the catalogue never drops furniture into the room by accident.',
     ],
     yield: [
-      {
-        label: 'Copyright SW-20059/2025',
-        detail: 'Registered with the Government of India, 8 Jan 2025',
-      },
+      { label: 'Copyright SW-20059/2025', detail: 'Registered with the Government of India, 8 Jan 2025' },
       { label: '60+ fps on device', detail: 'Sustained with multiple models placed' },
       { label: 'Multi-object placement', detail: 'Independent anchors per object' },
     ],
     spec: [
-      [
-        'Role',
-        'Sole developer; copyright registered to the six-person project team including the faculty supervisor',
-      ],
+      ['Role', 'Sole developer; copyright registered to the six-person project team including the faculty supervisor'],
       ['Duration', 'August to November 2024'],
       ['Platform', 'Android, Unity 2022.3, AR Foundation'],
       ['Language', 'C#'],
       ['Asset loading', 'Unity Addressables, async catalogue fetch by label'],
-      [
-        'Placement',
-        'ARRaycastManager against PlaneWithinPolygon; per-object PlacementAnchor',
-      ],
-      [
-        'Interaction',
-        'ARBaseGestureInteractable subclass; tap-to-place with UI raycast guard',
-      ],
+      ['Placement', 'ARRaycastManager against PlaneWithinPolygon; per-object PlacementAnchor'],
+      ['Interaction', 'ARBaseGestureInteractable subclass; tap-to-place with UI raycast guard'],
       ['Outcome', 'Copyright registration SW-20059/2025, diary number 36000/2024-CO/SW'],
     ],
     links: [],
