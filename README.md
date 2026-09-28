@@ -24,11 +24,11 @@ Course page: <https://johnguerra.co/classes/webDevelopment_online_fall_2026/>
 
 ## Video demo
 
-A short narrated walkthrough: <!-- TODO: paste your YouTube link here -->
+A short narrated walkthrough: 
 
 ## Presentation slides
 
-Project 1 presentation: <!-- TODO: paste your Google Slides link here -->
+Project 1 presentation: [view on Google Slides](https://docs.google.com/presentation/d/1sGVoezI5RXX-mA0UUmXePfW2JSiM5kEF2Wp7WVAb0JE/edit?usp=sharing)
 
 ## Project objective
 
@@ -133,8 +133,8 @@ mockups — is at [`docs/DESIGN.md`](docs/DESIGN.md).
 
 **Prompts used:**
 
-1. "Create a clear and descriptive README including: Author, Class Link, Project Objective, Screenshot, Instructions to build, Video Demo, GenAI Usage, References, Google Slides."
-2. "Given the rubric, please check the code for any omissions or any missing parts."
+1. "Create a clear and descriptive README including: Author, Class Link, Project Objective, Screenshot, Instructions to build, Video Demo, GenAI Usage, References."
+2. "Given the rubric, please check if the code needs any omissions or has any missing parts."
 3. "Try to add maps in the More section to showcase my travel history." (not shipped)
 
 ## Sources and references
