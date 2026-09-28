@@ -24,7 +24,7 @@ Course page: <https://johnguerra.co/classes/webDevelopment_online_fall_2026/>
 
 ## Video demo
 
-A short narrated walkthrough: 
+A short narrated walkthrough:
 
 ## Presentation slides
 
@@ -102,7 +102,7 @@ CSS Grid and Flexbox rather than Bootstrap.
 .
 ├── index.html            Home
 ├── work.html             Work
-├── more.html             More 
+├── more.html             More
 ├── css/
 │   └── style.css         Single stylesheet, organised by section
 ├── js/
